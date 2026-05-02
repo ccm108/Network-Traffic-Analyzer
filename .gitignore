@@ -1,0 +1,4 @@
+data/
+*.pcap
+*.pcapng
+*.log
