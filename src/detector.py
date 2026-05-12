@@ -1,10 +1,12 @@
 from collections import Counter, defaultdict
 
+# class for detecting suspicious network activity
 class ThreatDetector:
     def __init__(self, packets):
         self.packets = packets
         self.alerts = []
 
+    # checks for possible flooding activity
     def detect_ip_flooding(self, threshold=20):
         print("[*] Checking for IP flooding...")
 
@@ -20,6 +22,7 @@ class ThreatDetector:
                 }
                 self.alerts.append(alert)
 
+    # checks for possible port scanning behavior
     def detect_port_scan(self, threshold=10):
         print("[*] Checking for port scan behavior...")
 
@@ -42,6 +45,7 @@ class ThreatDetector:
                 }
                 self.alerts.append(alert)
 
+    # runs all detection checks
     def run_detection(self):
         print("[*] Running threat detection engine...")
 
@@ -51,6 +55,7 @@ class ThreatDetector:
         print(f"[*] Detection complete. Alerts found: {len(self.alerts)}")
         return self.alerts
 
+    # displays all detected alerts
     def print_alerts(self):
         print("\n===== SECURITY ALERTS =====")
 
