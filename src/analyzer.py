@@ -1,10 +1,12 @@
 from collections import Counter
 
+# class used to analyze captured network traffic
 class TrafficAnalyzer:
     def __init__(self, packets):
         self.packets = packets
         self.stats = {}
 
+    # analyzes packet data and traffic statistics
     def analyze(self):
         print("[*] Analyzing traffic...")
 
@@ -30,6 +32,7 @@ class TrafficAnalyzer:
         print("[*] Analysis complete")
         return self.stats
 
+    # prints a summary of the traffic analysis
     def print_summary(self):
         print("\n===== TRAFFIC SUMMARY =====")
         print(f"Total Packets: {self.stats['total_packets']}")
