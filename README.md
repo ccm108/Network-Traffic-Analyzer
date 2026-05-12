@@ -13,7 +13,7 @@ Features
 
 Requirements
 
-- Python 3
+- Python
 - Libraries from requirements.txt
 - Admin permissions may be needed to capture packets
 
