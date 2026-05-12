@@ -1,11 +1,14 @@
+# class used to organize and clean packet data
 class PacketParser:
     def __init__(self, packets):
         self.raw_packets = packets
         self.parsed_packets = []
 
+    # parses raw packet information
     def parse(self):
         print("[*] Parsing packets...")
 
+        # loops through all raw packets
         for pkt in self.raw_packets:
             parsed = {
                 "timestamp": pkt.get("timestamp"),
