@@ -2,11 +2,13 @@ import csv
 import json
 import os
 
+# class used to generate and save reports
 class ReportGenerator:
     def __init__(self, stats, alerts):
         self.stats = stats
         self.alerts = alerts
 
+    # exports report data into a JSON file
     def export_json(self, filepath="output/report.json"):
         print("[*] Exporting JSON report...")
 
@@ -22,6 +24,7 @@ class ReportGenerator:
 
         print(f"[*] JSON report saved to {filepath}")
 
+    # exports alert data into a CSV file
     def export_csv(self, filepath="output/report.csv"):
         print("[*] Exporting CSV report...")
 
